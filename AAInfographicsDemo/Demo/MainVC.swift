@@ -251,7 +251,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         cell.textLabel?.text = cellTitle
         cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
         cell.textLabel?.textColor = UIColor.darkGray
-        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+//        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
     }
     
@@ -308,31 +308,31 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     func configureTheConstraintArray(childView:UIView, fatherView:UIView) -> [NSLayoutConstraint] {
         return [NSLayoutConstraint(item:childView,
-                                   attribute:NSLayoutConstraint.Attribute.left,
-                                   relatedBy:NSLayoutConstraint.Relation.equal,
+                                   attribute:NSLayoutAttribute.left,
+                                   relatedBy:NSLayoutRelation.equal,
                                    toItem:fatherView,
-                                   attribute:NSLayoutConstraint.Attribute.left,
+                                   attribute:NSLayoutAttribute.left,
                                    multiplier:1.0,
                                    constant:0),
                 NSLayoutConstraint(item:childView,
-                                   attribute:NSLayoutConstraint.Attribute.right,
-                                   relatedBy:NSLayoutConstraint.Relation.equal,
+                                   attribute:NSLayoutAttribute.right,
+                                   relatedBy:NSLayoutRelation.equal,
                                    toItem:fatherView,
-                                   attribute:NSLayoutConstraint.Attribute.right,
+                                   attribute:NSLayoutAttribute.right,
                                    multiplier:1.0,
                                    constant:0),
                 NSLayoutConstraint(item:childView,
-                                   attribute:NSLayoutConstraint.Attribute.top,
-                                   relatedBy:NSLayoutConstraint.Relation.equal,
+                                   attribute:NSLayoutAttribute.top,
+                                   relatedBy:NSLayoutRelation.equal,
                                    toItem:fatherView,
-                                   attribute:NSLayoutConstraint.Attribute.top,
+                                   attribute:NSLayoutAttribute.top,
                                    multiplier:1.0,
                                    constant:0),
                 NSLayoutConstraint(item:childView,
-                                   attribute:NSLayoutConstraint.Attribute.bottom,
-                                   relatedBy:NSLayoutConstraint.Relation.equal,
+                                   attribute:NSLayoutAttribute.bottom,
+                                   relatedBy:NSLayoutRelation.equal,
                                    toItem:fatherView,
-                                   attribute:NSLayoutConstraint.Attribute.bottom,
+                                   attribute:NSLayoutAttribute.bottom,
                                    multiplier:1.0,
                                    constant:0)]
     }

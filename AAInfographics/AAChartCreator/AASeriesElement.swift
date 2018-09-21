@@ -40,6 +40,7 @@
     private var dataLabels:Dictionary<String,Any>?
     private var marker:Dictionary<String,Any>?
     private var step:Any?
+    private var states:Dictionary<String,Any>?
     private var colorByPoint:Bool?
     private var allowPointSelect:Bool?
     private var zIndex:Int?
@@ -132,6 +133,12 @@
     @discardableResult
     public func step(_ prop:Any) -> AASeriesElement {
         self.step = prop
+        return self
+    }
+
+    @discardableResult
+    public func states(_ prop:Dictionary<String,Any>) -> AASeriesElement {
+        self.states = prop
         return self
     }
     
