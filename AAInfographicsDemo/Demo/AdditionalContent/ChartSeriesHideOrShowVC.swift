@@ -117,64 +117,64 @@ class ChartSeriesHideOrShowVC: UIViewController {
     }
     
     func setUpSegmentedControls() {
-        let segmentedNamesArray =
-            [
-                ["hide One",
-                 "hide Two",
-                 "hide Three",
-                 "hide Four",
-                 ],
-                ["show One",
-                 "show Two",
-                 "show Three",
-                 "show Four",
-                 ]
-        ];
-        let typeLabelNameArr = ["HIDE CHART SERIES",
-                                "SHOW CHART SERIES"];
-        
-        for  i in 0..<segmentedNamesArray.count {
-            let segment = UISegmentedControl.init(items: segmentedNamesArray[i])
-            segment.frame = CGRect(x: 20, y: 40.0*CGFloat(i) + (self.view.frame.size.height-145), width: self.view.frame.size.width-40, height: 20)
-            segment.tag = i;
-            segment.tintColor = UIColor.red
-            segment.selectedSegmentIndex = 0
-            segment.addTarget(self, action:#selector(segmentDidSelected(segmentedControl:)), for:.valueChanged)
-            self.view.addSubview(segment)
-            
-            let subLabel = UILabel()
-            subLabel.font = UIFont(name: "EuphemiaUCAS", size: 12.0)
-            subLabel.frame = CGRect(x: 20, y: 40*CGFloat(i)+(self.view.frame.size.height-165), width: self.view.frame.size.width-40, height: 20)
-            subLabel.text = typeLabelNameArr[i]
-            subLabel.backgroundColor = UIColor.clear
-            subLabel.textColor = UIColor.lightGray
-            self.view.addSubview(subLabel)
-        }
+//        let segmentedNamesArray =
+//            [
+//                ["hide One",
+//                 "hide Two",
+//                 "hide Three",
+//                 "hide Four",
+//                 ],
+//                ["show One",
+//                 "show Two",
+//                 "show Three",
+//                 "show Four",
+//                 ]
+//        ];
+//        let typeLabelNameArr = ["HIDE CHART SERIES",
+//                                "SHOW CHART SERIES"];
+//
+//        for  i in 0..<segmentedNamesArray.count {
+//            let segment = UISegmentedControl.init(items: segmentedNamesArray[i])
+//            segment.frame = CGRect(x: 20, y: 40.0*CGFloat(i) + (self.view.frame.size.height-145), width: self.view.frame.size.width-40, height: 20)
+//            segment.tag = i;
+//            segment.tintColor = UIColor.red
+//            segment.selectedSegmentIndex = 0
+//            segment.addTarget(self, action:#selector(segmentDidSelected(segmentedControl:)), for:.valueChanged)
+//            self.view.addSubview(segment)
+//
+//            let subLabel = UILabel()
+//            subLabel.font = UIFont(name: "EuphemiaUCAS", size: 12.0)
+//            subLabel.frame = CGRect(x: 20, y: 40*CGFloat(i)+(self.view.frame.size.height-165), width: self.view.frame.size.width-40, height: 20)
+//            subLabel.text = typeLabelNameArr[i]
+//            subLabel.backgroundColor = UIColor.clear
+//            subLabel.textColor = UIColor.lightGray
+//            self.view.addSubview(subLabel)
+//        }
     }
     
     @objc func segmentDidSelected(segmentedControl:UISegmentedControl) {
-        if segmentedControl.tag == 0 {
-            aaChartView?.aa_hideTheSeriesElementContentWithSeriesElementIndex(segmentedControl.selectedSegmentIndex)
-        } else {
-            aaChartView?.aa_showTheSeriesElementContentWithSeriesElementIndex(segmentedControl.selectedSegmentIndex)
-        }
+//        if segmentedControl.tag == 0 {
+//            aaChartView?.aa_hideTheSeriesElementContentWithSeriesElementIndex(segmentedControl.selectedSegmentIndex)
+//        } else {
+//            aaChartView?.aa_showTheSeriesElementContentWithSeriesElementIndex(segmentedControl.selectedSegmentIndex)
+//        }
     }
     
     func setUpTheHideChartSeriesSwitch() {
-        let i = 0
-        let uiswitch = UISwitch()
-        uiswitch.frame = CGRect(x: 100*CGFloat(i)+20, y: self.view.frame.size.height-70, width: 100, height: 20)
-        uiswitch.isOn = false
-        uiswitch.addTarget(self, action: #selector(switchDidChange(switchView:)), for:.valueChanged)
-        self.view.addSubview(uiswitch)
-        
-        let subLabel = UILabel()
-        subLabel.font = UIFont(name: "EuphemiaUCAS", size: 10)
-        subLabel.frame = CGRect(x: 100*CGFloat(i)+20, y:self.view.frame.size.height-45, width: 200, height: 35)
-        subLabel.text = "Hide Chart Whole Series Content"
-        subLabel.backgroundColor = UIColor.clear
-        subLabel.textColor = UIColor.lightGray
-        self.view .addSubview(subLabel)
+//        let i = 0
+//        let uiswitch = UISwitch()
+//        uiswitch.frame = CGRect(x: 100*CGFloat(i)+20, y: self.view.frame.size.height-70, width: 100, height: 20)
+//        uiswitch.isOn = false
+//        uiswitch.addTarget(self, action: #selector(switchDidChange(switchView:)), for:.valueChanged)
+//        self.view.addSubview(uiswitch)
+//
+//        let subLabel = UILabel()
+//        subLabel.font = UIFont(name: "EuphemiaUCAS", size: 10)
+//        subLabel.frame = CGRect(x: 100*CGFloat(i)+20, y:self.view.frame.size.height-45, width: 200, height: 35)
+//        subLabel.text = "Hide Chart Whole Series Content"
+//        subLabel.backgroundColor = UIColor.clear
+//        subLabel.textColor = UIColor.lightGray
+//        self.view .addSubview(subLabel)
     }
 
     @objc func switchDidChange(switchView:UISwitch) {
